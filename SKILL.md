@@ -1,28 +1,26 @@
 ---
 name: vercel-expert
-description: Advanced Vercel deployment assistant. Automatically handles project linking (vercel link), production deployment (vercel --prod), and git synchronization. Use for standalone, automated deployment workflows in any project.
+description: Advanced Vercel deployment assistant. Automatically handles project linking (vercel link), production deployment (vercel --prod), and git synchronization. Perfect for automating release workflows.
 ---
 
-# Vercel Expert Skill
+# 🚀 Vercel Expert
 
-A standalone tool for fully automated Vercel deployments.
+Your specialized agent for hands-free deployments.
 
-## Capabilities
+## 🛠 Capabilities
 
-- **Auto-Initialization**: Detects if the project is linked to Vercel and runs `vercel link` if needed.
-- **Production Deployment**: Executes a full production build and deploy using `npx vercel --prod`.
-- **Git Integration**: Automatically adds, commits, and pushes changes if a Git repository is detected.
+- **Intelligent Linking**: Detects existing Vercel project associations or creates them via `vercel link`.
+- **Production-Ready**: Always aims for the `--prod` deployment unless specified otherwise.
+- **Git Bridge**: Seamlessly handles `git push` after successful deployment to keep your remotes in sync.
 
-## Usage
+## 📖 Operational Guide
 
-Simply ask the agent to "deploy to vercel" or "use vercel-expert to publish".
+When triggered, the agent will:
+1. Verify the project environment.
+2. Execute the deployment script: `node scripts/deploy.cjs`.
+3. Provide the resulting Vercel Deployment URL.
 
-### Commands Used
-The skill utilizes a bundled script to handle the logic deterministically:
-```bash
-node scripts/deploy.cjs
-```
+## ⚠️ Prerequisites
 
-## Prerequisites
-- Vercel CLI installed or available via `npx`.
-- Logged in to Vercel (`npx vercel login`).
+- Vercel CLI (accessible via `npx vercel`).
+- Active Vercel session (`npx vercel login`).
